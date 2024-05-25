@@ -9,7 +9,7 @@ const btn = document.querySelector(".getname button");
 async function checkWeather(cityname){
     const response = await fetch(apiurl + `&appid=${apiKey}&q=${cityname}`);
     let data = await response.json();
-    console.log(data);
+    //console.log(data);
     if(data.cod == "404"){
         alert(`Không tìm thấy thành phố có tên ${cityname}`);
     }
